@@ -1,21 +1,16 @@
 ﻿using IniParser;
 using Microsoft.Win32;
 using System;
-using System.Collections.Generic;
 using System.Diagnostics;
 using System.IO;
-using System.Linq;
 using System.Reflection;
 using System.Text;
-using System.Threading.Tasks;
 
-namespace ACULauncher {
+namespace ACUWL {
     class Program {
-        // TODO http://forums.ubi.com/showthread.php/947908-Skip-intro-command-in-Steam-and-ACU-version-Forums
-
         const string ACUDisplayName = "Assassin's Creed Unity";
         const string ACUIniDirectoryName = "Assassin's Creed Unity";
-        const string MyIniName = "ACULauncher.ini";
+        const string MyIniName = "ACUWL.ini";
         const string ACUIniName = "ACU.ini";
         const string ACUExeName = "ACU.exe";
 

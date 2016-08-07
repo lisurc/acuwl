@@ -7,8 +7,8 @@
     <ProjectGuid>{62382ABE-AE29-47B6-89ED-518400DCFF2C}</ProjectGuid>
     <OutputType>Exe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>ACULauncher</RootNamespace>
-    <AssemblyName>ACULauncher</AssemblyName>
+    <RootNamespace>ACUWL</RootNamespace>
+    <AssemblyName>ACUWL</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
