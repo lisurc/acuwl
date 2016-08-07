@@ -21,3 +21,6 @@ ACUWL.exe [path_to_ini] [path_to_exec]
 ```
 
 Note that you may need to start the utility with elevated privileges (Administrator). This is up to your actual system setup.
+
+## Credits
+All products named in this project are respected trademarks of their respective owners or publisher, which include but is not limited to, Assassin's Creed, Assassin's Creed Unity, UPlay, Steam.
