@@ -8,7 +8,7 @@ The utility works by updating the ACU.ini file of your User directory and start 
 
 If your game has been installed through a regular installer (may it be Steam of UPlay), the utility should automatically find these files. 
 
-If not, you may create a ACUWL.ini file alongsite the ACUWL executable. The file content should look like the following:
+If not, you may create a ACUWL.ini file alongsite the ACUWL.exe executable. The file content should look like the following:
 ```
 [Settings]
 IniPath=[path_to_ini]
@@ -21,6 +21,11 @@ ACUWL.exe [path_to_ini] [path_to_exec]
 ```
 
 Note that you may need to start the utility with elevated privileges (Administrator). This is up to your actual system setup.
+
+## Where
+While you should never download an executable file from a stranger on the Internet, you can download the latest packaged release as zip file on github: https://github.com/lisurc/acuwl/releases
+
+Alternatively (and preferably) you can clone this repository and build it as I did with a Visual Studio Edition (Community 2015 in my case).
 
 ## Credits
 All products named in this project are trademarks of their respective owners or publishers, which include but is not limited to, Assassin's Creed, Assassin's Creed Unity, UPlay, Steam.
