@@ -1,6 +1,6 @@
 # Assassin's Creed Unity Windowed mode Launcher (acuwl)
 
-[![Build Status](https://travis-ci.org/lisurc/acuwl.svg?branch=master)](https://travis-ci.org/lisurc/acuwl)
+[![GitHub version](https://badge.fury.io/gh/lisurc%2Facuwl.svg)](https://badge.fury.io/gh/lisurc%2Facuwl) [![Build Status](https://travis-ci.org/lisurc/acuwl.svg?branch=master)](https://travis-ci.org/lisurc/acuwl)
 
 ## What
 This small utility may be used to force the windowed mode of the game when starting Assassin's Creed Unity (ACU).
