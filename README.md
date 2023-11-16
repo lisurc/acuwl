@@ -1,6 +1,6 @@
 # Assassin's Creed Unity Windowed mode Launcher (acuwl)
 
-[![GitHub version](https://badge.fury.io/gh/lisurc%2Facuwl.svg)](https://badge.fury.io/gh/lisurc%2Facuwl) [![Build Status](https://travis-ci.org/lisurc/acuwl.svg?branch=master)](https://travis-ci.org/lisurc/acuwl)
+[![GitHub version](https://badge.fury.io/gh/lisurc%2Facuwl.svg)](https://badge.fury.io/gh/lisurc%2Facuwl)
 
 ## What
 This small utility may be used to force the windowed mode of the game when starting Assassin's Creed Unity (ACU).
@@ -12,13 +12,15 @@ The utility works by updating the ACU.ini file of your User directory and start 
 If your game has been installed through a regular installer (may it be Steam of UPlay), the utility should automatically find these files. 
 
 If not, you may create a ACUWL.ini file alongsite the ACUWL.exe executable. The file content should look like the following:
+
 ```
 [Settings]
 IniPath=[path_to_ini]
 ExecPath=[path_to_exec]
 ```
 
-You can also create a shortcut to the ACUWL.exe executable with two arguments pointing at the necessary files like this :
+You can also create a shortcut to the ACUWL.exe executable with two arguments pointing at the necessary files like this:
+
 ```
 ACUWL.exe [path_to_ini] [path_to_exec]
 ```
@@ -28,7 +30,7 @@ Note that you may need to start the utility with elevated privileges (Administra
 ## Where
 While you should never download an executable file from a stranger on the Internet, you can download the latest packaged release as zip file on github: https://github.com/lisurc/acuwl/releases
 
-Alternatively (and preferably) you can clone this repository and build it as I did with a Visual Studio Edition (Community 2015 in my case).
+Alternatively you can clone this repository and build it as any recent Visual Studio Community edition.
 
 ## Credits
-All products named in this project are trademarks of their respective owners or publishers, which include but is not limited to, Assassin's Creed, Assassin's Creed Unity, UPlay, Steam.
+All products named in this project are trademarks of their respective owners or publishers, which include but is not limited to, Ubisoft, Assassin's Creed, Assassin's Creed Unity, UPlay, Steam.

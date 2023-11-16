@@ -78,10 +78,10 @@ namespace ACUWL {
             }
 
             if (!File.Exists(acuExecutable)) {
-                Console.Error.WriteLine("Can not locate ACU executable path: {0}", acuExecutable);
+                Console.Error.WriteLine("Cannot locate ACU executable path: {0}", acuExecutable);
                 PressAnyKeyToExit(1);
             }
-            
+
             Process.Start(acuExecutable);
         }
 
@@ -104,23 +104,24 @@ namespace ACUWL {
 
             foreach (var view in views) {
                 try {
-                    using (var baseKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, view)) {
-                        using (var parentKey = baseKey.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Uninstall")) {
-                            string[] nameList = parentKey.GetSubKeyNames();
-                            for (int i = 0; i < nameList.Length; i++) {
-                                using (var regKey = parentKey.OpenSubKey(nameList[i])) {
-                                    try {
-                                        if (regKey.GetValue("DisplayName")?.ToString() == ACUDisplayName) {
-                                            return regKey.GetValue("InstallLocation")?.ToString();
-                                        }
-                                    }
-                                    catch { }
-                                }
+                    using var baseKey = RegistryKey.OpenBaseKey(RegistryHive.LocalMachine, view);
+                    using var parentKey = baseKey.OpenSubKey(@"Software\Microsoft\Windows\CurrentVersion\Uninstall");
+                    string[] nameList = parentKey.GetSubKeyNames();
+                    foreach (string name in nameList) {
+                        using var regKey = parentKey.OpenSubKey(name);
+                        try {
+                            if (regKey.GetValue("DisplayName")?.ToString() == ACUDisplayName) {
+                                return regKey.GetValue("InstallLocation")?.ToString();
                             }
+                        }
+                        catch {
+                            // silent
                         }
                     }
                 }
-                catch { }
+                catch {
+                    // silent
+                }
             }
             return null;
         }
