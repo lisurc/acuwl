@@ -1,0 +1,11 @@
+# This action will setup the .NET version and actions of other workflows
+
+name: Setup .NET
+description: Setup the .NET environment on the runner
+runs:
+  using: "composite"
+  steps:
+  - name: Setup .NET
+    uses: actions/setup-dotnet@v3
+    with:
+        dotnet-version: 8.0.x
