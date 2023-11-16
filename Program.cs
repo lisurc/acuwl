@@ -3,7 +3,6 @@ using Microsoft.Win32;
 using System;
 using System.Diagnostics;
 using System.IO;
-using System.Reflection;
 using System.Text;
 
 namespace ACUWL {
@@ -29,7 +28,7 @@ namespace ACUWL {
             parser.Parser.Configuration.AllowDuplicateKeys = true;
             parser.Parser.Configuration.AllowDuplicateSections = true;
             parser.Parser.Configuration.AllowKeysWithoutSection = true;
-            var myIni = Path.Combine(Path.GetDirectoryName(Assembly.GetEntryAssembly().Location), MyIniName);
+            var myIni = Path.Combine(AppContext.BaseDirectory, MyIniName);
 
             string acuIni = null;
             string acuExecutable = null;
