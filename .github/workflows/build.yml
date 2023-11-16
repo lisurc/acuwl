@@ -1,6 +1,6 @@
 # This workflow will build the solution
 
-name: Attach to release
+name: Build
 
 on:
   push:

@@ -1,6 +1,6 @@
 # This workflow will attach the executable to the Github release
 
-name: Build
+name: Attach to release
 
 on: 
   release:
