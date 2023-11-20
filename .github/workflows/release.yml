@@ -20,9 +20,8 @@ jobs:
     - name: Create executable
       run: dotnet publish
       
-    - name: Attach executable
-      uses: actions/upload-artifact@v3
-      with:
-        name: ACUWL.exe
-        path: ${{ github.workspace }}/bin/Release/net*-windows/win-x64/publish/ACUWL.exe
-        if-no-files-found: error
+    - name: Attach executable to release
+      run: gh release upload $GITHUB_REF_NAME $ASSET_PATH --clobber
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        ASSET_PATH: ${{ github.workspace }}/bin/Release/net*-windows/win-x64/publish/ACUWL.exe
