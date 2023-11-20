@@ -21,8 +21,7 @@ jobs:
       run: dotnet publish
       
     - name: Attach executable to release
-      run: gh release upload $TAG $ASSET_PATH --clobber
+      run: gh release upload $GITHUB_REF_NAME $ASSET_PATH --clobber
       env:
         GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        TAG: ${{ github.ref.name }}
         ASSET_PATH: ${{ github.workspace }}/bin/Release/net*-windows/win-x64/publish/ACUWL.exe
