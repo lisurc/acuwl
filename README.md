@@ -1,6 +1,7 @@
 # Assassin's Creed Unity Windowed mode Launcher (acuwl)
 
 [![GitHub version](https://badge.fury.io/gh/lisurc%2Facuwl.svg)](https://badge.fury.io/gh/lisurc%2Facuwl)
+[![Build](https://github.com/lisurc/acuwl/actions/workflows/build.yml/badge.svg)](https://github.com/lisurc/acuwl/actions/workflows/build.yml)
 
 ## What
 This small utility may be used to force the windowed mode of the game when starting Assassin's Creed Unity (ACU).
@@ -30,9 +31,9 @@ ACUWL.exe [path_to_ini] [path_to_exec]
 Note that you may need to start the utility with elevated privileges (Administrator). This is up to your actual system setup.
 
 ## Where
-While you should never download an executable file from a stranger on the Internet, you can download the latest packaged release as zip file on github: https://github.com/lisurc/acuwl/releases
+While you should never download an executable file from a stranger on the Internet, you can download the latest packaged executable in the [Releases](https://github.com/lisurc/acuwl/releases) page.
 
-Alternatively you can clone this repository and build it as any recent Visual Studio Community edition.
+Alternatively you can clone this repository and build it with any recent Visual Studio Community edition.
 
 ## Credits
 All products named in this project are trademarks of their respective owners or publishers, which include but is not limited to, Ubisoft, Assassin's Creed, Assassin's Creed Unity, UPlay, Steam.
