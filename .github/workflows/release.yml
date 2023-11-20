@@ -1,0 +1,28 @@
+# This workflow will attach the executable to the Github release
+
+name: Attach to release
+
+on: 
+  release:
+    types: [ published ]
+
+jobs:
+  attach:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v4
+    - uses: ./.github/actions/setup_dotnet
+    
+    - name: Restore dependencies
+      run: dotnet restore
+
+    - name: Create executable
+      run: dotnet publish
+      
+    - name: Attach executable
+      uses: actions/upload-artifact@v3
+      with:
+        name: ACUWL.exe
+        path: ${{ github.workspace }}/bin/Release/net*-windows/win-x64/publish/ACUWL.exe
+        if-no-files-found: error
